@@ -37,8 +37,7 @@ function add_html_doc {
 
 function do_tree {
     tree=$1
-    label=$2 # because of spelling of plurals
-    
+
     echo "Processing $tree $INDEX..."
     (
         cd "$tree" || exit 1
@@ -58,8 +57,8 @@ function do_tree {
     )
 }
 
-do_tree branches branch
-do_tree releases release
+do_tree branches
+do_tree releases
 
 echo "Making top level $INDEX"
 
